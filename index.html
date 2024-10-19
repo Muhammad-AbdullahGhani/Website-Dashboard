@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="Style.css">
+    </script>
+    <script type="importmap">
+        {
+          "imports": {
+            "@google/generative-ai": "https://esm.run/@google/generative-ai"
+          }
+        }
+      </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="side-menu">
+            <a href="index.html">Dashboard</a>
+            <a href="table.html">Tables</a>
+        </div>
+        <div class="main-content">
+            <section>
+                <div class="search">
+                    <input type="text" id="searchbar" placeholder="Enter the city">
+                    <select id="tempUnit">
+                        <option value="metric">Celsius</option>
+                        <option value="imperial">Fahrenheit</option>
+                    </select>
+                    <button class="btn" id="btn">Get Weather</button>
+                </div>
+            </section>
+
+            <section class="info">
+                <div id="statistics">
+                    <h1 id="cityName">Current Weather</h1>
+                    <p id="temp">Temperature: <span>--</span></p>
+                    <p id="humid">Humidity: <span>--</span></p>
+                    <p id="wind">Wind Speed: <span>--</span></p>
+                    <p id="descr">Weather Description: <span>--</span></p>
+                    <img id="Weatherimage" alt="Weather Icon">
+                </div>
+
+                <div id="chatfield">
+                    <h1>Chatbot</h1>
+                    <input type="text" id="gembar" placeholder="Enter the message">
+                    <button id="gembtn">Send</button>
+                    <div id="response">
+                        <p id="gemresponse"></p>
+                    </div>
+                </div>
+
+            </section>
+
+        </div>
+    </div>
+
+    <script type="module" src="Script.js" defer></script>
+</body>
+
+</html>
